@@ -3,6 +3,7 @@ package com.sagnf.medicinereminder.security;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
@@ -10,6 +11,14 @@ import java.util.Date;
 
 @Service
 public class JwtService {
+    public String extractUsername(String token) {
+        return null;
+    }
+
+    public boolean isTokenValid(String token, UserDetails userDetails) {
+        return false;
+    }
+
 
     private final SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
