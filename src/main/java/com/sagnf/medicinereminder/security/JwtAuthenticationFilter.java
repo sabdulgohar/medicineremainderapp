@@ -64,6 +64,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                         .setAuthentication(authToken);
             }
         }
+        System.out.println("JWT Username: " + username);
 
         filterChain.doFilter(request, response);
     }
